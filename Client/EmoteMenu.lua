@@ -6,20 +6,17 @@ menuPosition = {x = 0, y = 200}
 PlayerData = QBCore.Functions.GetPlayerData()
 isLoggedIn = false
 
-RegisterNetEvent('QBCore:Client:OnPlayerLoaded')
-AddEventHandler('QBCore:Client:OnPlayerLoaded', function()
+RegisterNetEvent('QBCore:Client:OnPlayerLoaded', function()
     PlayerData = QBCore.Functions.GetPlayerData()
     isLoggedIn = true
 end)
 
-RegisterNetEvent('QBCore:Client:OnPlayerUnload')
-AddEventHandler('QBCore:Client:OnPlayerUnload', function()
+RegisterNetEvent('QBCore:Client:OnPlayerUnload', function()
     PlayerData = {}
     isLoggedIn = false
 end)
 
-RegisterNetEvent('QBCore:Player:SetPlayerData')
-AddEventHandler('QBCore:Player:SetPlayerData', function(val)
+RegisterNetEvent('QBCore:Player:SetPlayerData', function(val)
     PlayerData = val
 end)
 
